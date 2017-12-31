@@ -15,15 +15,24 @@ npm install react-graphcool-image -S
 ### React
 ```jsx
 import GraphCoolImage from 'react-graphcool-image'
-
-<GraphCoolImage file={{ secret: string, url: string }} width={number} height={number} />
+type GraphCoolFileType = {
+  id: string,
+  secret: string,
+  url: string,
+}
+<GraphCoolImage file={file: GraphCoolFileType} width={number} height={number} />
 ```
 
 ### React Native
 ```jsx
 import GraphCoolImage from 'react-graphcool-image/native'
+type GraphCoolFileType = {
+  id: string,
+  secret: string,
+  url: string,
+}
 
-<GraphCoolImage file={{ secret: string, url: string }} width={number} height={number} />
+<GraphCoolImage file={file: GraphCoolFileType} width={number} height={number} />
 ```
 
 ### Use with Image Progress
